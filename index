@@ -5,6 +5,10 @@
 
 <style>
 
+*{
+	background-color: #68D2E1;
+}
+
 #fnamebox
 {
 	height:30px;
@@ -35,7 +39,7 @@ Input the text you want to save in the big box and the filename and hit <b>Creat
 </p>
 <input id="fnamebox" type="text" value="Filename goes here."></input>
 <br><br>
-<textarea id="texts" rows='5' cols='80'></textarea>
+<textarea id="texts" rows='5' cols='80'>Text goes here.</textarea>
 <br><br>
 
 <button onclick="download()">Create file</button>
