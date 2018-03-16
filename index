@@ -1,0 +1,47 @@
+<!-- html text editor -->
+<html>
+<head>
+<title> Text Editor </title>
+
+<style>
+
+#fnamebox
+{
+	height:30px;
+	width:300px;
+	font-size:14pt;
+}
+</style>
+
+
+<script type="text/javascript">
+
+function download() {
+  var a = document.getElementById("a");
+  var text = document.getElementById("texts").value;
+  var name = document.getElementById("fnamebox").value;
+  var file = new Blob([text], {type:"text/plain"});
+  a.href = URL.createObjectURL(file);
+  a.download = name;
+}
+
+</script>
+
+</head>
+
+<body>
+<p style = "color:000;">
+Input the text you want to save in the big box and the filename and hit <b>Create file</b> before downloading.
+</p>
+<input id="fnamebox" type="text" value="Filename goes here."></input>
+<br><br>
+<textarea id="texts" rows='5' cols='80'></textarea>
+<br><br>
+
+<button onclick="download()">Create file</button>
+<br>
+<a href="" id="a">click here to download your file</a>
+
+
+</body>
+</html>
